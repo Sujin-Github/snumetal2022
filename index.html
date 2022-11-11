@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sujin04420442.dothome.co.kr">
+    <meta property="og:title" content="안녕, 오늘 우린">
+    <meta property="og:image" content="./source/thumbnail.png">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        window.addEventListener("wheel", function(e){
+            e.preventDefault();
+        },{passive : false});
+
+        var mHtml = $("html");
+        var page = 1;
+
+        mHtml.animate({scrollTop : 0},10);
+
+        $(window).on("wheel", function(e) {
+            if(mHtml.is(":animated")) return;
+            if(e.originalEvent.deltaY > 0) {
+                if(page == 7) return;
+                page++;
+            } else if(e.originalEvent.deltaY < 0) {
+                if(page == 1) return;
+                page--;
+            }
+            var posTop = (page-1) * $(window).height();
+            mHtml.animate({scrollTop : posTop});
+            if(page == 1) {
+                $('.dot2').css("background-color", "transparent");
+            } else if(page == 2){
+                $('.dot2').css("background-color", "white");
+                $('.dot3').css("background-color", "transparent");
+            }   else if(page == 3){
+                $('.dot3').css("background-color", "white");
+                $('.dot4').css("background-color", "transparent");
+            }   else if(page == 4){
+                $('#bar').css("display","grid");
+                $('.dot4').css("background-color", "white");
+                $('.dot5').css("background-color", "transparent");
+            }   else if(page == 5){
+                $('#bar').css("display","none");
+                $('.dot5').css("background-color", "white");
+                $('.dot6').css("background-color", "transparent");
+            }   else if(page == 6){
+                $('#bar').css("display","grid");
+                $('.dot6').css("background-color", "white");
+                $('.dot7').css("background-color", "transparent");
+            }   else if(page == 7){
+                $('.dot7').css("background-color", "white");
+            }
+        })
+
+        var ts;
+        $(window).bind('touchstart', function(e){
+          e.stopPropagation();
+          ts = e.originalEvent.touches[0].clientY;
+        });
+
+        $(window).bind('touchend', function(e){
+          e.stopPropagation();
+          var te = e. originalEvent.changedTouches[0].clientY;
+          if(mHtml.is(":animated")) return;
+          if(ts > te + 10){
+                if(page == 7) return;
+                page++;
+          } else if(ts < te - 10){
+                if(page == 1) return;
+                page--;
+          }
+          var posTop =(page-1) * $(window).height();
+          mHtml.animate({scrollTop : posTop});
+          if(page == 1) {
+              $('.dot2').css("background-color", "transparent");
+          } else if(page == 2){
+              $('.dot2').css("background-color", "white");
+              $('.dot3').css("background-color", "transparent");
+          }   else if(page == 3){
+              $('.dot3').css("background-color", "white");
+              $('.dot4').css("background-color", "transparent");
+          }   else if(page == 4){
+              $('#bar').css("display","grid");
+              $('.dot4').css("background-color", "white");
+              $('.dot5').css("background-color", "transparent");
+          }   else if(page == 5){
+              $('#bar').css("display","none");
+              $('.dot5').css("background-color", "white");
+              $('.dot6').css("background-color", "transparent");
+          }   else if(page == 6){
+              $('#bar').css("display","grid");
+              $('.dot6').css("background-color", "white");
+              $('.dot7').css("background-color", "transparent");
+          }   else if(page == 7){
+              $('.dot7').css("background-color", "white");
+          }
+        });
+    </script>
+    <title>안녕, 오늘 우린</title>
+</head>
+<body>
+    <div id="bar">
+        <div class='dot1'></div>
+        <div class='dot2'></div>
+        <div class='dot3'></div>
+        <div class='dot4'></div>
+        <div class='dot5'></div>
+        <div class='dot6'></div>
+        <div class='dot7'></div>
+    </div>
+
+
+    <div class="section" id="section1">
+        <img style="display: none;" src='./source/thumbnail.png'>
+        <img class='logo' src='./source/logo1w.png' alt="안오우로고화이트">
+        <div id="section1box">
+            <p class="txt1">서울대학교 미술대학 금속공예전공 졸업전시, 2022</p>
+            <img class='snulogo' src='./source/SNULogoWhite.png' alt="서울대학교로고">
+            <div class='eng1'>Seoul National University College of Fine Arts</div>
+            <div class='eng1' style="top: 18px;">Metalwork Graduation Exhibition</div>
+            <img class='logo2' src='./source/wjsrhd.png'>
+            <img class='logo3' src='./source/dPdhf.png'>
+        </div>
+    </div>
+
+    <div class="section" id="section2">
+        <img class='logo_2' src='./source/logo1b.png'>
+        <div class='txtbox2'>
+            <p>작업을 한다는 건 어쩌면 매일 쓰는 일기와도 같습니다.<br>금속을 자르고 데우고 갈아내는 한 번의 손길이 한 줄의 일기가 되어 시간은 그렇게 금속에 새겨집니다.</p>
+            <p>도무지 풀리는 일이 없는 날도,<br>함께라서 그저 행복한 날도<br>일기에는 모두 숨김없이 나타나듯</p>
+            <p>서로의 날들은 서로의 작업을 통해 읽을 수 있습니다.</p>
+            <p>마음을 나눌 수 있는 관계란 어떤 걸까요?<br>일기장을 들춰봤을 때,<br>그곳에 내가 아닌 우리가 있다면 어떨까요?<br>하루하루 땀흘려 완성한 작업처럼,<br>우리가 나눈 추억도 차곡차곡 쌓였습니다.</p>
+            <p>교환일기처럼 모인 우리의 기록들을 공개하는<br>2022 서울대학교 금속공예전공 졸업전시</p>
+            <p><안녕, 오늘 우린>에 여러분을 초대합니다.</p>
+        </div>
+        <div id="logocontainer2"><img class='snulogo2' src='./source/SNULogoBlue.png'></div>
+    </div>
+
+    <div class="section" id="section3">
+        <div id="section3wrapper">
+            <div class='title3'>전시일정</div>
+            <img class='cal' src='./source/cal.png'>
+            <div class='txt3_L' style='grid-area: t31;'>12/1(목) - 12/4(일)</div>
+            <div style='grid-area: t32;'><hr class='hr3'></div>
+            <div class='txt3_R' style='grid-area: t33;'>10am - 6pm</div>
+            <div class='txt3_L' style='grid-area: t41;'>오프닝</div>
+            <div style='grid-area: t42;'><hr class='hr3'></div>
+            <div class='txt3_R' style='grid-area: t43;'>12/1(목), 5pm</div>
+        </div>
+    </div>
+
+    <div class="section" id="section4">
+        <div id="section4wrapper">
+            <div class='title4'>오시는 길</div>
+            <img class='map' src='./source/mapPC.jpg'>
+            <div class='txtbox4'>
+                <p class='txt4'><b>+ 주소 +</b><br>서울대학교 예술복합연구동 74동 2층 우석갤러리</p>
+                <p class='txt4'><b>+ 대중교통 +</b><br>2호선 서울대입구역 3번 출구에서,<br>5511번 버스 탑승 후 경영대. 행정대학원 하차 후 도보 10분<br>5513번 버스 탑승 후 자연대. 행정관입구 하차 후 도보 10분</p>
+                <p class='txt4'><b>+ 교내 지도 +</b></p>
+                <button type="button" class="buttonstyle" onclick="window.open('https://map.snu.ac.kr/m/search_result.action?search_word=%EC%98%88%EC%88%A0%EB%B3%B5%ED%95%A9%EC%97%B0%EA%B5%AC%EB%8F%99&con_type=F&seq=94')">서울대학교 캠퍼스맵</button>
+                <p class='txt4'><b>+ 교내 주차 안내 +</b></p>
+                <button type="button" class="buttonstyle" onclick="window.open('https://www.snu.ac.kr/about/gwanak/parking/parking')">학교 주차 안내</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section5">
+        <image class="logo_5" src='./source/logo1mb.png'>
+        <div id="profilegrid5">
+            <div style='grid-area: c1;'><img src='./source/profile/1.jpg'></div>
+            <div style='grid-area: c2'><img src='./source/profile/2.jpg'></div>
+            <div style='grid-area: c3;'><img src='./source/profile/3.jpg'></div>
+            <div style='grid-area: c4;'><img src='./source/profile/4.jpg'></div>
+            <div style='grid-area: c5;'><img src='./source/profile/5.jpg'></div>
+            <div style='grid-area: b1;'>
+                <img src='./source/profilebw/1.jpg' class='profilebw'>
+                <p class='profiletxt'>박예림</p>
+            </div>
+            <div style='grid-area: b2'>
+                <img src='./source/profilebw/2.jpg' class='profilebw'>
+                <p class='profiletxt'>박주영</p>
+            </div>
+            <div style='grid-area: b3;'>
+                <img src='./source/profilebw/3.jpg' class='profilebw'>
+                <p class='profiletxt'>김유진</p>
+            </div>
+            <div style='grid-area: b4;'>
+                <img src='./source/profilebw/4.jpg' class='profilebw'>
+                <p class='profiletxt'>안혜인</p>
+            </div>
+            <div style='grid-area: b5;'>
+                <img src='./source/profilebw/5.jpg' class='profilebw'>
+                <p class='profiletxt'>서은지</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section5_2">
+        <div id="profilegrid5_2">
+            <div style='grid-area: c6;'><img src='./source/profile/6.jpg'></div>
+            <div style='grid-area: c7'><img src='./source/profile/7.jpg'></div>
+            <div style='grid-area: c8;'><img src='./source/profile/8.jpg'></div>
+            <div style='grid-area: c9;'><img src='./source/profile/9.jpg'></div>
+            <div style='grid-area: c10;'><img src='./source/profile/10.jpg'></div>
+            <div style='grid-area: c11;'><img src='./source/profile/11.jpg'></div>
+            <div style='grid-area: c12;'><img src='./source/profile/12.jpg'></div>
+            <div style='grid-area: b6;'>
+                <img src='./source/profilebw/6.jpg' class='profilebw'>
+                <p class='profiletxt'>김하린</p>
+            </div>
+            <div style='grid-area: b7'>
+                <img src='./source/profilebw/7.jpg' class='profilebw'>
+                <p class='profiletxt'>장혜영</p>
+            </div>
+            <div style='grid-area: b8;'>
+                <img src='./source/profilebw/8.jpg' class='profilebw'>
+                <p class='profiletxt'>박미란</p>
+            </div>
+            <div style='grid-area: b9;'>
+                <img src='./source/profilebw/9.jpg' class='profilebw'>
+                <p class='profiletxt'>김한나</p>
+            </div>
+            <div style='grid-area: b10;'>
+                <img src='./source/profilebw/10.jpg' class='profilebw'>
+                <p class='profiletxt'>김혜민</p>
+            </div>
+            <div style='grid-area: b11;'>
+                <img src='./source/profilebw/11.jpg' class='profilebw'>
+                <p class='profiletxt'>김재환</p>
+            </div>
+            <div style='grid-area: b12;'>
+                <img src='./source/profilebw/12.jpg' class='profilebw'>
+                <p class='profiletxt'>연식</p>
+            </div>
+        </div>
+        <img class='logo6' src='./source/SNULogoWhite.png'></img>
+        <img class='logo6_2' src='./source/logo1w.png'></img>
+    </div>
+
+    <div class="section" id="section6">
+        <img class='hand' src='./source/hand.png'>
+        <a class='txt6' href="https://instagram.com/snu_metal?igshid=YmMyMTA2M2Y=" target="_blank">Instagram<br>@snu_metal</a>
+    </div>
+</body>
+</html>

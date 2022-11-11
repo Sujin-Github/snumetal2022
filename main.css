@@ -1,0 +1,835 @@
+html {
+    overflow: hidden;
+}
+
+html, body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+@font-face {
+    font-family: 'AppleSD';
+    src: url('./Apple산돌고딕Neo/AppleSDGothicNeoM.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'AppleSD';
+    src: url('./Apple산돌고딕Neo/AppleSDGothicNeoB.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'AppleSD';
+    src: url('./Apple산돌고딕Neo/AppleSDGothicNeoL.ttf');
+    font-weight: lighter;
+}
+@font-face {
+    font-family: 'AppleSD';
+    src: url('./Apple산돌고딕Neo/AppleSDGothicNeoEB.ttf');
+    font-weight: 900;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
+    background-color: white;
+}
+/*
+#bar {
+    position: fixed;
+    z-index: 10;
+    right: 10px;
+    top: calc( 50% - 70px );
+    height: 150px;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    align-items: center;
+    align-content: center;
+    width: 15px;
+    grid-template-areas:
+        "dot1"
+        "dot2"
+        "dot3"
+        "dot4"
+        "dot5"
+        "dot6"
+        "dot7";
+}*/
+#bar{
+    position: fixed;
+    z-index: 10;
+    bottom: 20px;
+    left: calc( 50% - 70px );
+    width: 140px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    align-content: center;
+    grid-template-areas:
+        "dot1 dot2 dot3 dot4 dot5 dot6 dot7";
+    transition: all ease 0.3s;
+}
+
+#bar>div{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 0 auto;
+    z-index: 10;
+    background-color: none;
+    transition: all ease 0.3s;
+}
+
+.dot1 {
+    grid-area: dot1;
+    background-color: white;}
+.dot2 {
+    grid-area: dot2;}
+.dot3 {
+    grid-area: dot3;}
+.dot4 {
+    grid-area: dot4;}
+.dot5 {
+    grid-area: dot5;}
+.dot6 {
+    grid-area: dot6;}
+.dot7 {
+    grid-area: dot7;
+}
+
+.content {
+    position: absolute;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    left: 15%;
+    top: 28%;
+    width: 70%;
+}
+
+.txt1 {
+    grid-area: t;
+    font-size: 17px;
+    color: #FFFFFF;
+    margin: 0 0 13px 0;
+    font-family: 'AppleSD';
+    font-weight: normal;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.snulogo {
+    grid-area: logo1;
+    width: auto;
+    max-width: 55px;
+    width: 100%;
+}
+
+.eng1 {
+    grid-area: eng1;
+    position: absolute;
+    font-size: 11px;
+    font-weight: lighter;
+    color: white;
+    line-height: 13px;
+    font-family: 'pretendard';
+    margin-top: 5px;
+}
+
+.logo2 {
+    grid-area: logo2;
+    max-width: 70px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.logo3 {
+    grid-area: logo3;
+    max-width: 40px;
+    width: 90%;
+}
+
+#section1 {
+    background-image : url("./source/bg1.jpg");
+}
+
+#section1box {
+    position: absolute;
+    left: 5%;
+    bottom: 7%;
+    height: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 11% auto 14% 8%;
+    grid-template-rows: 17px auto;
+    row-gap: 13px;
+    column-gap: 5px;
+    grid-template-areas:
+        "t t t t"
+        "logo1 eng1 logo2 logo3";
+}
+
+#section2 {
+    overflow: hidden;
+    background-image: url("./source/bg2.jpg");
+    background-position: right;
+}
+
+.logo_2 {
+    position: absolute;
+    top: 7%;
+    width: 50%;
+    left: 25%;
+}
+
+.txtbox2 {
+    position: absolute;
+    top: 24%;
+    width: 72%;
+    left: 14%;
+    font-size: 12px;
+    line-height: 23px;
+    color: #0E1EAC;
+    text-align: center;
+    height: 60%;
+    overflow: auto;
+    font-family: 'AppleSD';
+    font-weight: bold;
+}
+#logocontainer2 {
+    position: absolute;
+    bottom: 9%;
+    height: 8%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "snulogo2";
+}
+
+.snulogo2 {
+    grid-area: snulogo2;
+    position: absolute;
+    height: 100%;
+    width: auto;
+}
+
+#section3 {
+    overflow: hidden;
+    background-image: url("./source/bg3.png");
+    background-position: left;
+}
+
+#section3wrapper {
+    position: absolute;
+    top: 17%;
+    width: 64%;
+    left: 18%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 25px auto 30px 30px;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-areas:
+        "t2 t2 t2"
+        "c c c"
+        "t31 t32 t33"
+        "t41 t42 t43";
+    overflow: visible;
+    white-space: nowrap;
+}
+
+.title3 {
+    grid-area: t2;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #0007BE;
+    font-family: 'AppleSD';
+    font-weight: bold;
+}
+
+.cal {
+    grid-area: c;
+    align-self: center;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
+
+.txt3_L {
+    font-family: 'AppleSD';
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    color: #0007BE;
+}
+.txt3_R {
+    font-family: 'AppleSD';
+    text-align: right;
+    font-weight: bold;
+    font-size: 15px;
+    color: #0007BE;
+}
+
+.hr3 {
+    border: 1px solid #0007BE;
+}
+
+#section4 {
+    background-image: url("./source/bg4.png");
+    background-position: left;
+    overflow: hidden;
+}
+
+#section4wrapper {
+    position: absolute;
+    top: 10%;
+    width: 80%;
+    left: 10%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 25px calc(85% - 350px) 325px;
+    row-gap: 25px;
+    grid-template-areas:
+        "t4"
+        "m"
+        "t42";
+    overflow: hidden;
+    object-fit: auto;
+    white-space: nowrap;
+}
+
+.title4 {
+    grid-area: t4;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family: 'AppleSD';
+    font-weight: bold;
+}
+
+.map {
+    grid-area: m;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.txtbox4 {
+    grid-area: t42;
+    position: relative;
+    bottom: 0;
+    overflow: auto;
+    width: 95%;
+    left: 2.5%;
+}
+
+.txt4 {
+    font-size: 13px;
+    color: #FFFFFF;
+    font-family: 'AppleSD';
+    font-weight: bold;
+    text-align: left;
+    line-height: 22px;
+}
+
+.buttonstyle {
+    background-color: #341FFF;
+    border-radius: 15px;
+    border-width: 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'AppleSD';
+    font-weight: 900;
+    color: white;
+    opacity: 1;
+    position: relative;
+    width: 50%;
+    height: 25px;
+    transition: 0.2s;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.buttonstyle:active {
+    background-color: white;
+    border:2px solid #341FFF;
+}
+
+#section5 {
+    background-image: url("./source/bg5.png");
+    background-position: top;
+}
+
+.logo_5 {
+    position: absolute;
+    top: 9%;
+    left: 20%;
+    width: 60%;
+}
+
+#profilegrid5 {
+    position: absolute;
+    top: calc(30% - 10px);
+    height: 70%;
+    width: 60%;
+    left: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: stretch;
+    grid-template-areas:
+        "c1 b1"
+        "b2 c2"
+        "c3 b3"
+        "b4 c4"
+        "c5 b5";
+}
+
+#profilegrid5>div {
+    position: relative;
+    overflow-y: hidden;
+    text-align: center;
+    background-color: none;
+    vertical-align: middle;
+}
+
+#profilegrid5>div>img{
+    display: block;
+    margin: 0px auto;
+    object-fit: contain;
+    width: auto;
+    height: 100%;
+    z-index: 1;
+}
+
+.profilebw {
+    transition: all ease 0.3s;
+}
+
+.profilebw:active {
+    filter: brightness(80%);
+}
+
+.profiletxt {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    font-family: 'AppleSD';
+    font-size: 16px;
+    text-align: center;
+    font-weight: 900;
+    color: #341FFF;
+    top: 0px;
+    line-height: 100%;
+    margin: calc( 50% - 16px ) 0 0 calc( 50% - 20.5px);
+}
+
+#section5_2 {
+    background-image: url("./source/bg5_2.png");
+    background-position: bottom;
+}
+
+#profilegrid5_2 {
+    position: absolute;
+    top: 0%;
+    height: 94%;
+    width: 60%;
+    left: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: stretch;
+    grid-template-areas:
+        "b6 c6"
+        "c7 b7"
+        "b8 c8"
+        "c9 b9"
+        "b10 c10"
+        "c11 b11"
+        "b12 c12";
+}
+
+#profilegrid5_2>div {
+    position: relative;
+    overflow-y: hidden;
+    text-align: center;
+    background-color: none;
+}
+
+#profilegrid5_2>div>img{
+    display: block;
+    margin: 0px auto;
+    object-fit: contain;
+    width: auto;
+    height: 100%;
+    z-index: 1;
+}
+
+
+#section6 {
+    background-image: url("./source/bg6.png")
+}
+
+.hand {
+    position: absolute;
+    top: 40%;
+    width: 24%;
+    left: 41%;
+    transition: all ease 0.8s;
+}
+
+.hand:active {
+    transform: rotate( 25deg );
+}
+
+.txt6 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'AppleSD';
+    font-weight: normal;
+    color: #0215AB;
+    line-height: 19px;
+    margin-top: 0px;
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    .hand:hover {
+        transform: rotate( 15deg );
+    }
+
+    .buttonstyle:hover {
+        filter: brightness(90%);
+    }
+
+    .profilebw:hover {
+        filter: brightness(80%);
+    }
+
+    .txt6:hover {
+        text-decoration: underline;
+    }
+
+}
+
+.logo6 {
+    display: none;
+}
+.logo6_2 {
+    display: none;
+}
+
+
+/*PC 미디어 쿼리*/
+@media all and (min-width:1024px) {
+
+    #section1box {
+        grid-template-columns: 60px auto 14% 8%;
+    }
+
+    .logo {
+        position: absolute;
+        left: 35%;
+        top: 30%;
+        width: 30%;
+    }
+    .txt1 {
+        grid-area: t;
+        font-size: 20px;
+        color: #FFFFFF;
+        margin: 0 0 13px 0;
+        font-family: 'AppleSD';
+        font-weight: normal;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+    .eng1 {
+        grid-area: eng1;
+        position: absolute;
+        font-size: 15px;
+        font-weight: lighter;
+        color: white;
+        line-height: 15px;
+        font-family: 'pretendard';
+        margin-top: 10px;
+    }
+    #section2 {
+        overflow: hidden;
+        background-image: url("./source/bg2PC.jpg");
+        background-position: right;
+    }
+    .logo_2 {
+        position: absolute;
+        top: 18%;
+        width: 30%;
+        left: 6%;
+        max-width: 500px;
+    }
+    .txtbox2 {
+        position: absolute;
+        top: 15%;
+        width: 35%;
+        left: 50%;
+        font-size: 16px;
+        line-height: 27px;
+        color: #0E1EAC;
+        text-align: left;
+        height: 70%;
+        overflow: auto;
+        white-space: normal;
+        font-family: 'AppleSD';
+        font-weight: bold;
+    }
+    #logocontainer2 {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+    .snulogo2 {
+        grid-area: none;
+        position: absolute;
+        bottom: 18%;
+        width: 14%;
+        left: 14%;
+        height: auto;
+    }
+    #section3 {
+        background-image: url('./source/bg3PC.png');
+        background-position: left;
+    }
+    #section3wrapper {
+        position: absolute;
+        top: 10%;
+        width: 60%;
+        left: 20%;
+        height: 65%;
+        display: grid;
+        grid-template-columns: 3fr 1fr 0.5fr 1fr;
+        grid-template-rows: 25px 1fr 1fr;
+        row-gap: 40px;
+        column-gap: 30px;
+        grid-template-areas:
+            "t2 t2 t2 t2"
+            "c t31 t32 t33"
+            "c t41 t42 t43";
+        overflow: visible;
+        white-space: nowrap;
+        align-items: center;
+    }
+    .cal {
+        grid-area: c;
+        object-fit: contain;
+        object-position: top;
+        height: auto;
+    }
+    .title3 {
+        font-size: 26px;
+    }
+    .txt3_L {
+        font-size: 18px;
+    }
+    .txt3_R {
+        font-size: 18px;
+    }
+    .hr3 {
+        border: 1px solid #0007BE;
+    }
+
+
+    #section4 {
+        background-image: url("./source/bg4PC.png");
+        background-position: right;
+        overflow: hidden;
+    }
+    #section4wrapper {
+        position: absolute;
+        top: 8%;
+        width: 60%;
+        left: 10%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px auto;
+        row-gap: 40px;
+        column-gap: 20px;
+        grid-template-areas:
+            "t4 t4"
+            "m t42";
+        overflow: visible;
+        object-fit: auto;
+        white-space: nowrap;
+    }
+    .map {
+        border-radius: 10px;
+    }
+    .title4 {
+        font-size: 26px;
+        color: #0E1EAC;
+        font-family: 'AppleSD';
+        font-weight: bold;
+    }
+    .txtbox4 {
+        grid-area: t42;
+        overflow: visible;
+        width: 100%;
+    }
+    .txt4 {
+        font-size: 16px;
+        color: #000000;
+        line-height: 26px;
+        font-weight: normal;
+    }
+    .buttonstyle {
+        font-weight: bold;
+        font-size: 16px;
+        height: 35px;
+    }
+
+
+    #section5 {
+        background-image: url("./source/bg5.png");
+        background-position: top;
+    }
+
+    .logo_5 {
+        position: absolute;
+        top: 15%;
+        left: calc(50% - 150px);
+        width: 300px;
+        height: auto;
+    }
+
+    #profilegrid5 {
+        position: absolute;
+        top: auto;
+        bottom: 10px;
+        height: 45%;
+        width: 80%;
+        left: 10%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 0px;
+        align-items: stretch;
+        grid-template-areas:
+            "c1 b2 c3 b4 c5"
+            "b1 c2 b3 c4 b5";
+    }
+
+    #profilegrid5>div {
+        position: relative;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: none;
+    }
+
+    #profilegrid5>div>img{
+        object-fit: cover;
+        height: 100%;
+    }
+    .profiletxt {
+        font-size: 20px;
+        font-weight: 900;
+        margin-top: calc(50% - 15px);
+    }
+
+    #profilegrid5_2 {
+        position: absolute;
+        top: 10px;
+        height: 90%;
+        width: 80%;
+        left: 10%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr 10px 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 0px;
+        align-items: stretch;
+        grid-template-areas:
+            "c6 b7 c8 b9 c10"
+            "b6 c7 b8 c9 b10"
+            ". . . . ."
+            "c11 b12 . . ."
+            "b11 c12 . l5 l5";
+    }
+    #profilegrid5_2>div {
+        position: relative;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: none;
+    }
+    .logo6 {
+        position: absolute;
+        right: 10%;
+        height: 150px;
+        bottom: 10%;
+        opacity: 50%;
+        object-fit: contain;
+        display: block;
+    }
+    .logo6_2 {
+        position: absolute;
+        right: calc(10% + 190px);
+        height: 150px;
+        bottom: 10%;
+        object-fit: contain;
+        display: block;
+        opacity: 50%;
+    }
+    #profilegrid5_2>div>img{
+        object-fit: cover;
+        height: 100%;
+    }
+    .hand {
+        position: absolute;
+        top: 38%;
+        height: 120px;
+        width: auto;
+        left: calc(50% - 65px);
+        transition: all ease 0.8s;
+    }
+    .txt6 {
+        text-align: center;
+        position: absolute;
+        top: calc(38% + 120px);
+        width: 100%;
+        font-size: 17px;
+        font-family: 'AppleSD';
+        font-weight: normal;
+        color: #0215AB;
+        line-height: 19px;
+        margin-top: 0px;
+        text-decoration: none;
+    }
+    #bar {
+        display: none;
+    }
+
+}
